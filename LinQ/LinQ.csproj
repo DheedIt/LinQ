@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="ToDevelop\**" />
+    <EmbeddedResource Remove="ToDevelop\**" />
+    <None Remove="ToDevelop\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Castle.Windsor" Version="6.0.0" />
   </ItemGroup>
 

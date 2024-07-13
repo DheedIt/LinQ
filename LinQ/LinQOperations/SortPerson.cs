@@ -3,17 +3,18 @@ using LinQ.Features;
 using LinQ.ILinQOperations;
 namespace LinQ.LinQOperations;
 
-internal class SortPerson : ISortPerson
+internal class SortPerson : AbstractOperation
 {
-    public List<Person> Sort(List<Person> persons)
+    public override string Name => "Показать отстортированный список людей";
+    public override void Select(List<Person> persons)
     {
-        var SortedPersons = persons.OrderByDescending(p => p.Company, new CustomComparer())
+        Console.Clear();
+        var newList = persons.OrderByDescending(p => p.Company, new CustomComparer())
             .ThenByDescending(p => p.Language, new CustomComparer())
             .ThenByDescending(p => p.Name);
-        foreach (var p in SortedPersons)
+        foreach (var p in newList)
         {
             Console.WriteLine($"{p.Name}, {p.Age}, {p.Company}, {p.Language}");
         }
-        return SortedPersons.ToList();
     }
 }

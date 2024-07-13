@@ -2,22 +2,24 @@
 using LinQ.Lists;
 
 namespace LinQ.LinQOperations;
-internal class SelectPerson : ISelectPerson
+internal class SelectPerson : AbstractOperation
 {
-    public List<Person> Select(List<Person> listOfPeople)
+    
+    public override string Name => "Показать список людей";
+    public override void Select(List<Person> listOfPeople)
     {
-        var selectAllList = listOfPeople.Select(l => new
+        Console.Clear();
+        var newList = listOfPeople.Select(l => new
         {
             name = l.Name,
             age = l.Age,
             company = l.Company,
             language = l.Language
         });
-        foreach (var p in selectAllList)
+        foreach (var p in newList)
         {
             Console.WriteLine($"{p?.name}, {p?.age},{p?.company}, {p?.language}");
         }
-        return listOfPeople.ToList();
     }
 }
 
