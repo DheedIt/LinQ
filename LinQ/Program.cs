@@ -12,11 +12,14 @@ class Program
 { //Меню с операциями и списком в дб
     static void Main(string[] args)
     {
-        
+        ListOfPerson list = new ListOfPerson();
+        RequestNumber number = new RequestNumber();
+        ListOfOperations operations = new ListOfOperations();
+        RequestOperation requestOperation = new RequestOperation();
         
         try
         {
-            while (true) { Start(); }
+            while (true) { Start(list, number,operations,requestOperation); }
             
         }
         catch (Exception exep)
@@ -25,12 +28,9 @@ class Program
             Console.WriteLine(exep.Message);
         }
     }
-    public static void Start()
+    public static void Start(ListOfPerson list, RequestNumber number, ListOfOperations operations, RequestOperation requestOperation)
     {
-        ListOfPerson list = new ListOfPerson();
-        RequestNumber number = new RequestNumber();
-        ListOfOperations operations = new ListOfOperations();
-        RequestOperation requestOperation = new RequestOperation();
+        
         int i = 0;
         foreach(var o in operations.Get())
         {
