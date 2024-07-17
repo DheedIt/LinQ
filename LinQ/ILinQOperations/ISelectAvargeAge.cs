@@ -2,7 +2,7 @@
 
 namespace LinQ.ILinQOperations
 {
-    internal interface ISelectPersonWithNLenght
+    internal interface ISelectAvargeAge
     {
         public void Select(List<Person> listOfPeople);
     }

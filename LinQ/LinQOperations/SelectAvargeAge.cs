@@ -1,8 +1,10 @@
-﻿using LinQ.Lists;
+﻿using LinQ.ILinQOperations;
+using LinQ.LinQOperations.AbstractClasses;
+using LinQ.Lists;
 
 namespace LinQ.LinQOperations
 {
-    public class SelectAvargeAge : AbstractOperation
+    public class SelectAvargeAge : SelectOperations, ISelectAvargeAge
     {
         public override string Name => "Выбрать людей чей возраст является усредненным числом";
         public override void Select(List<Person> list)

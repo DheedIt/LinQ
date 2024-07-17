@@ -1,7 +1,7 @@
 ﻿using LinQ.Lists;
 namespace LinQ.ILinQOperations;
 
-public interface ISelectPerson
+public interface ISelectPeople
 {
-    public List<Person> Select(List<Person> listOfPeople);
+    public void Select(List<Person> listOfPeople);
 }

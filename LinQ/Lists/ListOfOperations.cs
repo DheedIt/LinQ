@@ -1,4 +1,5 @@
 ﻿using LinQ.LinQOperations;
+using LinQ.LinQOperations.AbstractClasses;
 
 namespace LinQ.Lists
 {
@@ -7,9 +8,9 @@ namespace LinQ.Lists
         public List<AbstractOperation> Get()
         {
             var listOfOperations = new List<AbstractOperation> {
-            new SelectPerson(),
+            new SelectPeople(),
             new SelectPersonWithNLenght(),
-            new SortPerson(),
+            new SelectSortedtPeople(),
             new SelectAvargeAge(),
             new SelectCertainLanguageWithPeople(),
             new SelectExeptLanguageWithPeople(),

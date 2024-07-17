@@ -1,8 +1,9 @@
 ﻿using LinQ.ILinQOperations;
+using LinQ.LinQOperations.AbstractClasses;
 using LinQ.Lists;
 
 namespace LinQ.LinQOperations;
-internal class SelectPerson : AbstractOperation
+internal class SelectPeople : SelectOperations, ISelectPeople
 {
     
     public override string Name => "Показать список людей";

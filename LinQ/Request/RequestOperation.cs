@@ -1,4 +1,4 @@
-﻿using LinQ.LinQOperations;
+﻿using LinQ.LinQOperations.AbstractClasses;
 
 namespace LinQ.Request
 {

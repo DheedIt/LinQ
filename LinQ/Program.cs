@@ -3,7 +3,7 @@ using Castle.Facilities.Startable;
 using Castle.MicroKernel.Resolvers.SpecializedResolvers;
 using Castle.Windsor;
 using LinQ.ILinQOperations;
-using LinQ.LinQOperations;
+using LinQ.LinQOperations.AbstractClasses;
 using LinQ.Lists;
 using LinQ.Request;
 
@@ -16,6 +16,7 @@ class Program
         RequestNumber number = new RequestNumber();
         ListOfOperations operations = new ListOfOperations();
         RequestOperation requestOperation = new RequestOperation();
+        list.Create();
         
         try
         {

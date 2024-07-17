@@ -1,9 +1,11 @@
-﻿using LinQ.Lists;
+﻿using LinQ.ILinQOperations;
+using LinQ.LinQOperations.AbstractClasses;
+using LinQ.Lists;
 using LinQ.Request;
 
 namespace LinQ.LinQOperations
 {
-    internal class SelectCertainLanguageWithPeople : AbstractOperation
+    internal class SelectCertainLanguageWithPeople : SelectOperations, ISelectCertainLanguageWithPeople
     {
         public override string Name => "Подсчет людей с определенным языком программирования";
         public override void Select(List<Person> listOfPeople)

@@ -2,9 +2,10 @@
 {
     public class ListOfPerson
     {
-        public List<Person> Get()
+        List<Person> people;
+        public void Create()
         {
-            var listOfPeople = new List<Person>()
+            people = new List<Person>()
         {
             new Person("Sanya", 19, "Lesosbor", "C#"),
             new Person("Uliya", 22, "MTS", "Python"),
@@ -37,7 +38,8 @@
             new Person("Anton", 16, "Honor", "Rust"),
             new Person("Danil", 15, null , null)
         };
-            return listOfPeople;
         }
+        public List<Person> Get() => people;
+
     }
 }
