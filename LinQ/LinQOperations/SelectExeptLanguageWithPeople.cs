@@ -3,12 +3,13 @@ using LinQ.LinQOperations.AbstractClasses;
 using LinQ.Lists;
 using LinQ.Request;
 
+
 namespace LinQ.LinQOperations
 {
-    internal class SelectExeptLanguageWithPeople : SelectOperations, ISelectExeptLanguageWithPeople
+    internal class SelectExeptLanguageWithPeople : AbstractOperation, ISelectExeptLanguageWithPeople
     {
         public override string Name => "Подсчет людей с определенным языком программирования который не должен включать определенные языки";
-        public override void Select(List<Person> listOfPeople)
+        public override void Execute(List<Person> listOfPeople)
         {
             RequestStringArr stringArr = new RequestStringArr();
             listOfPeople.Select(x=> x.Language).Except(stringArr.Get()); // ??????????????????????????????

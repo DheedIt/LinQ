@@ -3,11 +3,11 @@ using LinQ.LinQOperations.AbstractClasses;
 using LinQ.Lists;
 
 namespace LinQ.LinQOperations;
-internal class SelectPeople : SelectOperations, ISelectPeople
+internal class SelectPeople : AbstractOperation, ISelectPeople
 {
     
     public override string Name => "Показать список людей";
-    public override void Select(List<Person> listOfPeople)
+    public override void Execute(List<Person> listOfPeople)
     {
         Console.Clear();
         var newList = listOfPeople.Select(l => new

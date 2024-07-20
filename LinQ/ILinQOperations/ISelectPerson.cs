@@ -3,5 +3,5 @@ namespace LinQ.ILinQOperations;
 
 public interface ISelectPeople
 {
-    public void Select(List<Person> listOfPeople);
+    public void Execute(List<Person> listOfPeople);
 }

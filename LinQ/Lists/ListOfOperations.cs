@@ -14,7 +14,8 @@ namespace LinQ.Lists
             new SelectAvargeAge(),
             new SelectCertainLanguageWithPeople(),
             new SelectExeptLanguageWithPeople(),
-            new AddNewPerson()
+            new AddNewPerson(),
+            new SelectDistinct()
         };
             return listOfOperations;
         }

@@ -2,12 +2,13 @@
 using LinQ.LinQOperations.AbstractClasses;
 using LinQ.Lists;
 
+
 namespace LinQ.LinQOperations
 {
-    public class SelectAvargeAge : SelectOperations, ISelectAvargeAge
+    public class SelectAvargeAge : AbstractOperation, ISelectAvargeAge
     {
         public override string Name => "Выбрать людей чей возраст является усредненным числом";
-        public override void Select(List<Person> list)
+        public override void Execute(List<Person> list)
         {
             int AvargeAge = (int)list.Average(p => p.Age);
             var newList = list.Where(x=> x?.Age == AvargeAge && (x!= null || x?.Age!= -1));

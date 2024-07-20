@@ -3,6 +3,6 @@ namespace LinQ.ILinQOperations
 {
     internal interface ISelectCertainLanguageWithPeople
     {
-        public void Select(List<Person> listOfPeople);
+        public void Execute(List<Person> listOfPeople);
     }
 }

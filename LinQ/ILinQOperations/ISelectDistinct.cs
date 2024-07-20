@@ -2,7 +2,7 @@
 
 namespace LinQ.ILinQOperations
 {
-    public interface IAddNewPerson
+    public interface ISelectDistinct
     {
         public void Execute(List<Person> list);
     }

@@ -4,6 +4,6 @@ namespace LinQ.ILinQOperations
 {
     internal interface ISelectPersonWithNLenght
     {
-        public void Select(List<Person> listOfPeople);
+        public void Execute(List<Person> listOfPeople);
     }
 }

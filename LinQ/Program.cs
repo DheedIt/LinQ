@@ -39,7 +39,7 @@ class Program
             ++i;
         }
         AbstractOperation operation = requestOperation.Request(number.Get()-1, operations.Get());
-        operation.Select(list.Get());
+        operation.Execute(list.Get());
         Console.ReadLine();
         Console.Clear();
     }

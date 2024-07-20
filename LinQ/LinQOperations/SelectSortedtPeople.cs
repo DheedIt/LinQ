@@ -1,13 +1,14 @@
 ﻿using LinQ.Lists;
 using LinQ.Features;
 using LinQ.ILinQOperations;
+
 using LinQ.LinQOperations.AbstractClasses;
 namespace LinQ.LinQOperations;
 
-internal class SelectSortedtPeople : SelectOperations, ISelectSortedtPeople
+internal class SelectSortedtPeople : AbstractOperation, ISelectSortedtPeople
 {
     public override string Name => "Показать отстортированный список людей";
-    public override void Select(List<Person> list)
+    public override void Execute(List<Person> list)
     {
         Console.Clear();
         var newList = list.OrderByDescending(p => p.Company, new CustomComparer())

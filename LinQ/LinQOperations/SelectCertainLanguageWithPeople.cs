@@ -3,12 +3,13 @@ using LinQ.LinQOperations.AbstractClasses;
 using LinQ.Lists;
 using LinQ.Request;
 
+
 namespace LinQ.LinQOperations
 {
-    internal class SelectCertainLanguageWithPeople : SelectOperations, ISelectCertainLanguageWithPeople
+    internal class SelectCertainLanguageWithPeople : AbstractOperation, ISelectCertainLanguageWithPeople
     {
         public override string Name => "Подсчет людей с определенным языком программирования";
-        public override void Select(List<Person> listOfPeople)
+        public override void Execute(List<Person> listOfPeople)
         {
 
             listOfPeople.Select(x=> x.Language).Intersect(new RequestStringArr().Get());
