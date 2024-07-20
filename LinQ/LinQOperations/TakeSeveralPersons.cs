@@ -14,6 +14,7 @@ namespace LinQ.LinQOperations
     {
         public override string Name => "Выбрать определенное количество людей";
         public override void Execute(List<Person> list) {
+            Console.Clear();
             RequestNumber num = new RequestNumber();
             var newList = list.Take(num.Get());
             foreach ( var p in newList )

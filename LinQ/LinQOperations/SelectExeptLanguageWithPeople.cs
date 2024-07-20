@@ -11,6 +11,7 @@ namespace LinQ.LinQOperations
         public override string Name => "Подсчет людей с определенным языком программирования который не должен включать определенные языки";
         public override void Execute(List<Person> listOfPeople)
         {
+            Console.Clear();
             RequestStringArr stringArr = new RequestStringArr();
             listOfPeople.Select(x=> x.Language).Except(stringArr.Get()); // ??????????????????????????????
             

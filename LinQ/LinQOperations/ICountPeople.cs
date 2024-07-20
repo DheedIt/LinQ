@@ -8,6 +8,7 @@ namespace LinQ.LinQOperations
         public override string Name => "Подсчет людей в списке";
         public override void Execute(List<Person> list)
         {
+            Console.Clear();
             Console.WriteLine(list.Count()); 
 
         }

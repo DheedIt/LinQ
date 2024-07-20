@@ -8,6 +8,7 @@ namespace LinQ.LinQOperations
     {
         public override string Name => "Показать список без повторений";
         public override void Execute(List<Person> list) {
+            Console.Clear();
             var newList = list.Distinct();
             foreach (Person p in list)
             {

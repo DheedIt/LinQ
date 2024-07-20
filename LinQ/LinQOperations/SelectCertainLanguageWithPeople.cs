@@ -11,7 +11,7 @@ namespace LinQ.LinQOperations
         public override string Name => "Подсчет людей с определенным языком программирования";
         public override void Execute(List<Person> listOfPeople)
         {
-
+            Console.Clear();
             listOfPeople.Select(x=> x.Language).Intersect(new RequestStringArr().Get());
             
             foreach (var p in listOfPeople)

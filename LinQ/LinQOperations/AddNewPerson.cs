@@ -10,6 +10,7 @@ namespace LinQ.LinQOperations
         public override string Name => "Добавить человека в список";
         public override void Execute(List<Person> list)
         {
+            Console.Clear();
             var addToList = new Person(new RequestString().Get(), new RequestNumber().Get(), new RequestString().Get(), new RequestString().Get());
             list.Add(addToList);
         }
