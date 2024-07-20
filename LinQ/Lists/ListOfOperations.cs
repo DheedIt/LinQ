@@ -15,7 +15,9 @@ namespace LinQ.Lists
             new SelectCertainLanguageWithPeople(),
             new SelectExeptLanguageWithPeople(),
             new AddNewPerson(),
-            new SelectDistinct()
+            new SelectDistinct(),
+            new ICountPeople(),
+            new TakeSeveralPersons()
         };
             return listOfOperations;
         }
