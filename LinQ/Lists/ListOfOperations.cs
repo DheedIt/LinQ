@@ -17,7 +17,9 @@ namespace LinQ.Lists
             new AddNewPerson(),
             new SelectDistinct(),
             new ICountPeople(),
-            new TakeSeveralPersons()
+            new TakeSeveralPersons(),
+            new CheckPerson(),
+            new GroupByElements()
         };
             return listOfOperations;
         }
